@@ -1446,9 +1446,14 @@
       try {
         const resp = await fetch(GAS_BACKEND_URL, {
           method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
           body: JSON.stringify({ action: 'registerCandidate', data: payload })
         });
+        
         const res = await resp.json();
+        
         if (res.status === 'success') {
           feedback.style.background = '#ECFDF5';
           feedback.style.color = '#065F46';
@@ -1463,18 +1468,17 @@
         } else {
           feedback.style.background = '#FEF2F2';
           feedback.style.color = '#991B1B';
-          feedback.innerText = res.message;
+          feedback.innerText = res.message || 'Registration failed.';
         }
       } catch (err) {
         feedback.style.background = '#FEF2F2';
         feedback.style.color = '#991B1B';
-        feedback.innerText = 'Server error. Please verify network or call +91 88918 43800.';
+        feedback.innerText = 'Network error: ' + err.message;
       } finally {
         btn.disabled = false;
         btn.innerText = 'Submit Candidate Profile & Secure CV';
       }
     }
-
     async function submitEmployerRegistration(e) {
       e.preventDefault();
       const btn = document.getElementById('emp-submit-btn');
