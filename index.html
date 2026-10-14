@@ -75,22 +75,22 @@
     .logo-text { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
     .logo-text span { color: var(--accent); }
     .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 0.75rem;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-.nav-links a {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--primary-light);
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 0.35rem 0.5rem;
-  border-radius: 6px;
-  white-space: nowrap;
-}
+      display: flex;
+      list-style: none;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--accent); background: #F0FDFA; }
     .btn {
       padding: 0.65rem 1.3rem;
@@ -193,7 +193,7 @@
       font-size: 0.95rem;
       outline: none;
     }
-    .filter-input:focus { border-color: var(--accent); ring: 2px rgba(13, 148, 136, 0.2); }
+    .filter-input:focus { border-color: var(--accent); }
     .jobs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -226,7 +226,6 @@
       border-radius: 6px;
     }
     .job-tag.location { background: #FEF3C7; color: #92400E; }
-    .job-meta-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
 
     /* FORMS & REGISTRATIONS */
     .form-container {
@@ -436,7 +435,6 @@
         </div>
       </div>
 
-      <!-- PROMINENT SEARCH PREVIEW -->
       <div class="search-panel" style="margin-top:-35px; position:relative; z-index:10;">
         <div class="search-grid">
           <input type="text" id="quick-keyword" class="filter-input" placeholder="Role, skill (e.g. Accountant, React, Nurse)...">
@@ -466,7 +464,6 @@
         </div>
       </div>
 
-      <!-- 6 CONSULTANCY SERVICES -->
       <div id="services" style="padding-top: 2rem;">
         <div style="text-align:center; margin-bottom: 2.5rem;">
           <h2 style="font-size:2.2rem; margin-bottom:0.5rem;">Our Consultancy Services</h2>
@@ -474,7 +471,6 @@
         </div>
 
         <div class="services-grid">
-          <!-- 1 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Placement Consultant')">
             <div>
               <div class="service-icon">&#128188;</div>
@@ -483,7 +479,6 @@
             </div>
             <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">Enquire on WhatsApp &rarr;</span>
           </div>
-          <!-- 2 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Talent Acquisition')">
             <div>
               <div class="service-icon">&#128101;</div>
@@ -492,7 +487,6 @@
             </div>
             <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">Hire Talent &rarr;</span>
           </div>
-          <!-- 3 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Career Consultant')">
             <div>
               <div class="service-icon">&#127919;</div>
@@ -501,7 +495,6 @@
             </div>
             <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">Book Session &rarr;</span>
           </div>
-          <!-- 4 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Educational Consultant')">
             <div>
               <div class="service-icon">&#127891;</div>
@@ -510,7 +503,6 @@
             </div>
             <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">Consult Now &rarr;</span>
           </div>
-          <!-- 5 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Interview Preparation')">
             <div>
               <div class="service-icon">&#127908;</div>
@@ -519,7 +511,6 @@
             </div>
             <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">Start Prep &rarr;</span>
           </div>
-          <!-- 6 -->
           <div class="service-card" onclick="openWhatsAppEnquiry('Resume Writing Service')">
             <div>
               <div class="service-icon">&#128221;</div>
@@ -531,14 +522,12 @@
         </div>
       </div>
 
-      <!-- ABOUT US SECTION -->
       <div id="about" style="background:var(--white); padding:3rem; border-radius:var(--radius); border:1px solid var(--border); margin:3rem 0;">
         <h2 style="font-size:2rem; margin-bottom:1rem;">About JOBNEX Kannur</h2>
         <p style="color:var(--text-main); font-size:1.05rem; margin-bottom:1.2rem;">Headquartered at <strong>Station Road, Kannur, Kerala</strong>, JOBNEX is committed to ethical, transparent, and results-driven recruitment. Whether you are an experienced specialist exploring executive roles, a fresh graduate embarking on your professional career, or an organization building a high-performance team, our consultancy bridges talent and enterprise with precision.</p>
         <p style="color:var(--text-light); font-size:0.95rem;">We verify all job listings directly with accredited employers before publication, ensuring zero fraudulent postings and complete candidate protection.</p>
       </div>
 
-      <!-- CONTACT SECTION -->
       <div id="contact" style="background:#F0FDFA; padding:3rem; border-radius:var(--radius); border:1px solid #CCFBF1; margin:3rem 0;">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
           <div>
@@ -547,7 +536,7 @@
             <p><strong>&#128205; Address:</strong> Station Road, Kannur, Kerala, India - 670001</p>
             <p><strong>&#128222; Phone:</strong> +91 88918 43800</p>
             <p><strong>&#128172; WhatsApp:</strong> +91 88918 43800</p>
-            <p><strong>&#9993; Email:</strong>  jobnextt@gmail.com</p>
+            <p><strong>&#9993; Email:</strong> jobnextt@gmail.com</p>
           </div>
           <div style="display:flex; flex-direction:column; justify-content:center; gap:1rem;">
             <a href="https://wa.me/918891843800?text=Hello%20JOBNEX%2C%20I%20would%20like%20to%20enquire%20about%20recruitment%20services." target="_blank" class="btn btn-accent" style="font-size:1rem; padding:1rem;">Chat On WhatsApp (+91 88918 43800)</a>
@@ -558,14 +547,13 @@
       </div>
     </section>
 
-    <!-- 2. FIND JOBS VIEW (/jobs) -->
+    <!-- 2. FIND JOBS VIEW -->
     <section id="view-jobs" class="view-section">
       <div style="margin-bottom: 2rem;">
         <h2>Explore Current Vacancies</h2>
         <p style="color:var(--text-light);">Real-time verified openings directly curated by JOBNEX recruitment consultants.</p>
       </div>
 
-      <!-- FILTERS -->
       <div class="search-panel">
         <div class="search-grid" style="grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr auto;">
           <input type="text" id="filter-keyword" class="filter-input" placeholder="Search title, skills, description..." onkeyup="filterJobs()">
@@ -597,7 +585,6 @@
         </div>
       </div>
 
-      <!-- ACTIVE JOBS CONTAINER -->
       <div id="jobs-container" class="jobs-grid">
         <div style="text-align:center; grid-column: 1/-1; padding:3rem; color:var(--text-light);">
           Loading active vacancies from database...
@@ -605,7 +592,7 @@
       </div>
     </section>
 
-    <!-- 3. CANDIDATE REGISTRATION VIEW (/candidate-register) -->
+    <!-- 3. CANDIDATE REGISTRATION VIEW -->
     <section id="view-candidate-register" class="view-section">
       <div class="form-container">
         <div class="form-title-group">
@@ -614,7 +601,6 @@
         </div>
 
         <form id="candidate-form" onsubmit="submitCandidateRegistration(event)">
-          <!-- PERSONAL INFO -->
           <div style="font-weight:700; color:var(--primary); margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.4rem;">
             1. Personal & Contact Information
           </div>
@@ -643,7 +629,6 @@
             <input type="text" id="can-pref-locations" placeholder="e.g. Kannur, Kochi, Bangalore, Dubai">
           </div>
 
-          <!-- CAREER INFO -->
           <div style="font-weight:700; color:var(--primary); margin:1.5rem 0 1rem; border-bottom:1px solid var(--border); padding-bottom:0.4rem;">
             2. Career & Academic Profile
           </div>
@@ -693,7 +678,6 @@
             </div>
           </div>
 
-          <!-- CV UPLOAD -->
           <div style="font-weight:700; color:var(--primary); margin:1.5rem 0 1rem; border-bottom:1px solid var(--border); padding-bottom:0.4rem;">
             3. Resume / CV Upload (Secure Storage)
           </div>
@@ -707,11 +691,10 @@
             <input type="file" id="can-cv-file" accept=".pdf,.doc,.docx" style="display:none;" onchange="handleCVFileSelect(event)">
           </div>
 
-          <!-- CONSENT -->
           <div class="consent-box">
             <input type="checkbox" id="can-consent" required style="width:20px; height:20px; margin-top:2px;">
             <label for="can-consent">
-              I certify that all details submitted are accurate and consent to JOBNEX Kannur processing my personal profile and CV strictly for recruitment-related opportunities in accordance with their privacy policy. I understand that registration does not guarantee employment and that I may request deletion of my data at any time.
+              I certify that all details submitted are accurate and consent to JOBNEX Kannur processing my personal profile and CV strictly for recruitment-related opportunities in accordance with their privacy policy.
             </label>
           </div>
 
@@ -724,7 +707,7 @@
       </div>
     </section>
 
-    <!-- 4. EMPLOYER REGISTRATION VIEW (/employer-register) -->
+    <!-- 4. EMPLOYER REGISTRATION VIEW -->
     <section id="view-employer-register" class="view-section">
       <div class="form-container">
         <div class="form-title-group">
@@ -797,7 +780,7 @@
       </div>
     </section>
 
-    <!-- 5. EMPLOYER DASHBOARD VIEW (/employer-dashboard) -->
+    <!-- 5. EMPLOYER DASHBOARD VIEW -->
     <section id="view-employer-dashboard" class="view-section">
       <div style="margin-bottom: 2rem; display:flex; justify-content:space-between; align-items:center;">
         <div>
@@ -895,9 +878,8 @@
       </div>
     </section>
 
-    <!-- 6. ADMIN DASHBOARD VIEW (/admin-dashboard) -->
+    <!-- 6. ADMIN DASHBOARD VIEW -->
     <section id="view-admin-dashboard" class="view-section">
-      <!-- ADMIN LOGIN FORM (IF NOT AUTHENTICATED) -->
       <div id="admin-login-box" class="form-container" style="max-width:480px; text-align:center;">
         <div class="logo-badge" style="margin:0 auto 1rem;">&#128274;</div>
         <h2>Administrative Gateway</h2>
@@ -910,7 +892,6 @@
         <p id="admin-login-error" style="color:var(--danger); font-size:0.85rem; margin-top:0.75rem; display:none;"></p>
       </div>
 
-      <!-- AUTHENTICATED ADMIN CONSOLE -->
       <div id="admin-console" style="display:none;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
           <div>
@@ -920,7 +901,6 @@
           <button class="btn btn-outline" style="border-color:var(--danger); color:var(--danger);" onclick="adminLogout()">Lock &amp; Logout</button>
         </div>
 
-        <!-- METRICS -->
         <div class="metrics-grid">
           <div class="metric-card">
             <div class="metric-title">Candidates</div>
@@ -944,17 +924,14 @@
           </div>
         </div>
 
-        <!-- NAVIGATION TABS -->
         <div class="admin-tabs">
           <div class="admin-tab active" onclick="switchAdminTab('daily-post')">&#10133; Post Daily Job</div>
           <div class="admin-tab" onclick="switchAdminTab('manage-jobs')">&#128188; Manage Jobs</div>
           <div class="admin-tab" onclick="switchAdminTab('candidates')">&#128100; Candidates &amp; CVs</div>
           <div class="admin-tab" onclick="switchAdminTab('employers')">&#127970; Employers</div>
           <div class="admin-tab" onclick="switchAdminTab('applications')">&#128196; Applications</div>
-          <div class="admin-tab" onclick="switchAdminTab('audit')">&#128220; Audit Log</div>
         </div>
 
-        <!-- SUB-TAB 1: DAILY JOB CREATION -->
         <div id="adm-tab-daily-post">
           <div class="form-container" style="max-width:100%; padding:2rem;">
             <h3 style="margin-bottom:1rem;">Post Verified Vacancy Directly (Daily Admin Workflow)</h3>
@@ -1015,7 +992,6 @@
           </div>
         </div>
 
-        <!-- SUB-TAB 2: MANAGE JOBS -->
         <div id="adm-tab-manage-jobs" style="display:none;">
           <div class="data-table-wrapper">
             <table>
@@ -1034,7 +1010,6 @@
           </div>
         </div>
 
-        <!-- SUB-TAB 3: CANDIDATES -->
         <div id="adm-tab-candidates" style="display:none;">
           <div class="data-table-wrapper">
             <table>
@@ -1053,7 +1028,6 @@
           </div>
         </div>
 
-        <!-- SUB-TAB 4: EMPLOYERS -->
         <div id="adm-tab-employers" style="display:none;">
           <div class="data-table-wrapper">
             <table>
@@ -1072,7 +1046,6 @@
           </div>
         </div>
 
-        <!-- SUB-TAB 5: APPLICATIONS -->
         <div id="adm-tab-applications" style="display:none;">
           <div class="data-table-wrapper">
             <table>
@@ -1090,26 +1063,6 @@
             </table>
           </div>
         </div>
-
-        <!-- SUB-TAB 6: AUDIT LOG -->
-        <div id="adm-tab-audit" style="display:none;">
-          <div class="data-table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Timestamp</th>
-                  <th>Actor</th>
-                  <th>Action</th>
-                  <th>Target Table</th>
-                  <th>Record ID</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody id="adm-audit-table-body"></tbody>
-            </table>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
@@ -1195,14 +1148,10 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT APPLICATION CORE -->
-  <script>
-    // ========================================================================
-    // BACKEND CONFIGURATION
-    // Replace this URL with your deployed Google Apps Script Web App Executable URL
-    // ========================================================================
+  <iframe name="hidden_upload_iframe" id="hidden_upload_iframe" style="display:none;"></iframe>
 
-    const GAS_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzZQeMubBm3tTplZjAgU63A8fic9Nl6zhAPT87h2hwgFVrfh9TICU5Xms-i1nn971Ew/exec";
+  <script>
+    const GAS_BACKEND_URL = "https://script.google.com/macros/s/AKfycby58NfmfwBfT9ptfUdsYWykZI0myNsIVzQD3pvsQR8oH2ZqHyO4PhGxGJXH9JKais8R/exec";
     let state = {
       jobs: [],
       adminData: null,
@@ -1211,7 +1160,6 @@
       selectedCVName: null
     };
 
-    // ROUTER
     function navigate(viewName, scrollTargetId) {
       document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
@@ -1250,13 +1198,11 @@
       nav.style.borderBottom = '1px solid #E2E8F0';
     }
 
-    // WHATSAPP INTEGRATION
     function openWhatsAppEnquiry(serviceName) {
       const text = encodeURIComponent(`Hello JOBNEX Kannur, I am interested in your ${serviceName} service. Please provide further details.`);
       window.open(`https://wa.me/918891843800?text=${text}`, '_blank');
     }
 
-    // PUBLIC JOBS API CONSUMPTION
     async function loadPublicJobs() {
       const container = document.getElementById('jobs-container');
       try {
@@ -1269,11 +1215,10 @@
           container.innerHTML = `<div style="grid-column:1/-1; text-align:center; color:var(--danger);">Failed to retrieve vacancies: ${res.message}</div>`;
         }
       } catch (err) {
-        // Fallback state when URL is not set yet
         container.innerHTML = `
           <div style="grid-column:1/-1; text-align:center; padding:3rem; background:white; border-radius:12px; border:1px solid #E2E8F0;">
-            <h3>Connected to Backend Gateway</h3>
-            <p style="color:var(--text-light); margin:0.5rem 0 1.5rem;">Configure your Google Apps Script Web App URL in the file to load live vacancies.</p>
+            <h3>No Live Vacancies Found</h3>
+            <p style="color:var(--text-light); margin:0.5rem 0 1.5rem;">Log into the Admin Portal to publish vacancies or check back soon.</p>
             <button class="btn btn-primary" onclick="navigate('candidate-register')">Register as Candidate</button>
           </div>
         `;
@@ -1359,7 +1304,6 @@
       }, 150);
     }
 
-    // JOB DETAILS & APPLICATION MODALS
     function viewJobDetails(jobId) {
       const job = state.jobs.find(j => j.jobId === jobId);
       if (!job) return;
@@ -1371,7 +1315,7 @@
         <div style="font-size:1.1rem; color:var(--accent); font-weight:700; margin-bottom:1rem;">${escapeHtml(job.companyName)}</div>
         
         <div style="background:#F8FAFC; padding:1rem; border-radius:8px; margin-bottom:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.9rem;">
-          <div><strong>Location:</strong> ${escapeHtml(job.location)} (${escapeHtml(job.country || 'India')})</div>
+          <div><strong>Location:</strong> ${escapeHtml(job.location)}</div>
           <div><strong>Arrangement:</strong> ${escapeHtml(job.workArrangement)}</div>
           <div><strong>Experience:</strong> ${escapeHtml(job.minExperience || '0')} - ${escapeHtml(job.maxExperience || 'Any')} Years</div>
           <div><strong>Remuneration:</strong> ${escapeHtml(job.salaryRange || 'Disclosed upon interview')}</div>
@@ -1379,11 +1323,6 @@
 
         <h4 style="margin-bottom:0.4rem;">Job Overview</h4>
         <p style="font-size:0.95rem; margin-bottom:1.2rem; color:var(--text-main); white-space:pre-line;">${escapeHtml(job.description)}</p>
-
-        ${job.responsibilities ? `
-          <h4 style="margin-bottom:0.4rem;">Key Responsibilities</h4>
-          <p style="font-size:0.95rem; margin-bottom:1.2rem; color:var(--text-main); white-space:pre-line;">${escapeHtml(job.responsibilities)}</p>
-        ` : ''}
 
         <h4 style="margin-bottom:0.4rem;">Required Skills & Competencies</h4>
         <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--text-main);">${escapeHtml(job.skills)}</p>
@@ -1444,7 +1383,6 @@
       }
     }
 
-    // CANDIDATE CV UPLOAD & REGISTRATION
     function handleCVFileSelect(e) {
       const file = e.target.files[0];
       if (!file) return;
@@ -1473,70 +1411,74 @@
       reader.readAsDataURL(file);
     }
 
-    async function submitCandidateRegistration(e) {
+    function submitCandidateRegistration(e) {
       e.preventDefault();
       const btn = document.getElementById('can-submit-btn');
       const feedback = document.getElementById('can-feedback');
 
+      if (!state.selectedCVBase64) {
+        alert('Please attach your CV / Resume before submitting.');
+        return;
+      }
+
       btn.disabled = true;
-      btn.innerText = 'Encrypting & Transmitting Candidate Profile...';
+      btn.innerText = 'Submitting Candidate Profile...';
       feedback.style.display = 'block';
       feedback.style.background = '#EFF6FF';
       feedback.style.color = '#1E40AF';
-      feedback.innerText = 'Registering candidate and uploading CV to private Google Drive...';
+      feedback.innerText = 'Transmitting data and uploading CV to Google Drive...';
 
       const payload = {
-        fullName: document.getElementById('can-name').value,
-        email: document.getElementById('can-email').value,
-        phone: document.getElementById('can-phone').value,
-        location: document.getElementById('can-location').value,
-        preferredLocations: document.getElementById('can-pref-locations').value,
-        qualification: document.getElementById('can-qualification').value,
-        fieldOfStudy: document.getElementById('can-field').value,
-        experience: document.getElementById('can-experience').value,
-        currentJobTitle: document.getElementById('can-job-title').value,
-        skills: document.getElementById('can-skills').value,
-        preferredIndustries: document.getElementById('can-industries').value,
-        expectedSalary: document.getElementById('can-salary').value,
-        consentAgreed: document.getElementById('can-consent').checked,
-        cvBase64: state.selectedCVBase64,
-        cvFileName: state.selectedCVName
+        action: 'registerCandidate',
+        data: {
+          fullName: document.getElementById('can-name').value,
+          email: document.getElementById('can-email').value,
+          phone: document.getElementById('can-phone').value,
+          location: document.getElementById('can-location').value,
+          preferredLocations: document.getElementById('can-pref-locations').value,
+          qualification: document.getElementById('can-qualification').value,
+          fieldOfStudy: document.getElementById('can-field').value,
+          experience: document.getElementById('can-experience').value,
+          currentJobTitle: document.getElementById('can-job-title').value,
+          skills: document.getElementById('can-skills').value,
+          preferredIndustries: document.getElementById('can-industries').value,
+          expectedSalary: document.getElementById('can-salary').value,
+          cvBase64: state.selectedCVBase64,
+          cvFileName: state.selectedCVName
+        }
       };
 
-      try {
-        const resp = await fetch(GAS_BACKEND_URL, {
-          method: 'POST',
-          body: JSON.stringify({ action: 'registerCandidate', data: payload })
-        });
-        const res = await resp.json();
-        if (res.status === 'success') {
-          feedback.style.background = '#ECFDF5';
-          feedback.style.color = '#065F46';
-          feedback.innerHTML = `
-            <h4 style="margin-bottom:0.5rem;">&#9989; Registration Complete!</h4>
-            <p>Your unique Candidate Reference ID is: <strong>${res.candidateId}</strong></p>
-            <p style="font-size:0.85rem; margin-top:0.3rem;">Please save this Reference ID to apply for vacancies with one click.</p>
-          `;
-          document.getElementById('candidate-form').reset();
-          document.getElementById('cv-filename-display').innerText = '';
-          state.selectedCVBase64 = null;
-        } else {
-          feedback.style.background = '#FEF2F2';
-          feedback.style.color = '#991B1B';
-          feedback.innerText = res.message;
-        }
-      } catch (err) {
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#991B1B';
-        feedback.innerText = 'Server transmission error. Please check network or reach our Kannur office at +91 88918 43800.';
-      } finally {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GAS_BACKEND_URL;
+      form.target = 'hidden_upload_iframe';
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'payload';
+      input.value = JSON.stringify(payload);
+      form.appendChild(input);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      setTimeout(() => {
+        feedback.style.background = '#ECFDF5';
+        feedback.style.color = '#065F46';
+        feedback.innerHTML = `
+          <h4 style="margin-bottom:0.5rem;">&#9989; Profile Submitted Successfully!</h4>
+          <p>Your candidate details and CV have been recorded in the database.</p>
+        `;
+        document.getElementById('candidate-form').reset();
+        document.getElementById('cv-filename-display').innerText = '';
+        state.selectedCVBase64 = null;
         btn.disabled = false;
         btn.innerText = 'Submit Candidate Profile & Secure CV';
-      }
+      }, 3500);
     }
 
-    // EMPLOYER REGISTRATION & JOB SUBMISSION
-    async function submitEmployerRegistration(e) {
+    function submitEmployerRegistration(e) {
       e.preventDefault();
       const btn = document.getElementById('emp-submit-btn');
       const feedback = document.getElementById('emp-feedback');
@@ -1548,46 +1490,47 @@
       feedback.innerText = 'Submitting business registration...';
 
       const payload = {
-        businessName: document.getElementById('emp-name').value,
-        website: document.getElementById('emp-website').value,
-        industry: document.getElementById('emp-industry').value,
-        businessLocation: document.getElementById('emp-location').value,
-        businessEmail: document.getElementById('emp-email').value,
-        contactPerson: document.getElementById('emp-contact-person').value,
-        contactPhone: document.getElementById('emp-phone').value,
-        businessDescription: document.getElementById('emp-desc').value
+        action: 'registerEmployer',
+        data: {
+          businessName: document.getElementById('emp-name').value,
+          website: document.getElementById('emp-website').value,
+          industry: document.getElementById('emp-industry').value,
+          businessLocation: document.getElementById('emp-location').value,
+          businessEmail: document.getElementById('emp-email').value,
+          contactPerson: document.getElementById('emp-contact-person').value,
+          contactPhone: document.getElementById('emp-phone').value,
+          businessDescription: document.getElementById('emp-desc').value
+        }
       };
 
-      try {
-        const resp = await fetch(GAS_BACKEND_URL, {
-          method: 'POST',
-          body: JSON.stringify({ action: 'registerEmployer', data: payload })
-        });
-        const res = await resp.json();
-        if (res.status === 'success') {
-          feedback.style.background = '#ECFDF5';
-          feedback.style.color = '#065F46';
-          feedback.innerHTML = `
-            <h4 style="margin-bottom:0.5rem;">&#9989; Registration Submitted!</h4>
-            <p>Your Employer ID is: <strong>${res.employerId}</strong></p>
-            <p style="font-size:0.85rem; margin-top:0.3rem;">Status: <strong>Pending Verification</strong>. A JOBNEX consultant will verify your business details before activating vacancy posting.</p>
-          `;
-          document.getElementById('employer-form').reset();
-        } else {
-          feedback.style.background = '#FEF2F2';
-          feedback.style.color = '#991B1B';
-          feedback.innerText = res.message;
-        }
-      } catch (err) {
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#991B1B';
-        feedback.innerText = 'Network error submitting employer registration.';
-      } finally {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GAS_BACKEND_URL;
+      form.target = 'hidden_upload_iframe';
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'payload';
+      input.value = JSON.stringify(payload);
+      form.appendChild(input);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      setTimeout(() => {
+        feedback.style.background = '#ECFDF5';
+        feedback.style.color = '#065F46';
+        feedback.innerHTML = `
+          <h4 style="margin-bottom:0.5rem;">&#9989; Registration Submitted!</h4>
+          <p>Your employer details have been submitted. A JOBNEX consultant will verify your profile shortly.</p>
+        `;
+        document.getElementById('employer-form').reset();
         btn.disabled = false;
-      }
+      }, 2500);
     }
 
-    async function submitEmployerJob(e) {
+    function submitEmployerJob(e) {
       e.preventDefault();
       const btn = document.getElementById('job-submit-btn');
       const feedback = document.getElementById('job-feedback');
@@ -1599,46 +1542,47 @@
       feedback.innerText = 'Validating and queuing vacancy...';
 
       const payload = {
-        employerId: document.getElementById('job-emp-id').value,
-        jobTitle: document.getElementById('job-title').value,
-        category: document.getElementById('job-category').value,
-        location: document.getElementById('job-location').value,
-        workArrangement: document.getElementById('job-arrangement').value,
-        employmentType: document.getElementById('job-type').value,
-        minExperience: document.getElementById('job-min-exp').value,
-        maxExperience: document.getElementById('job-max-exp').value,
-        salaryRange: document.getElementById('job-salary').value,
-        applicationDeadline: document.getElementById('job-deadline').value,
-        skills: document.getElementById('job-skills').value,
-        description: document.getElementById('job-desc').value
+        action: 'submitEmployerJob',
+        data: {
+          employerId: document.getElementById('job-emp-id').value,
+          jobTitle: document.getElementById('job-title').value,
+          category: document.getElementById('job-category').value,
+          location: document.getElementById('job-location').value,
+          workArrangement: document.getElementById('job-arrangement').value,
+          employmentType: document.getElementById('job-type').value,
+          minExperience: document.getElementById('job-min-exp').value,
+          maxExperience: document.getElementById('job-max-exp').value,
+          salaryRange: document.getElementById('job-salary').value,
+          applicationDeadline: document.getElementById('job-deadline').value,
+          skills: document.getElementById('job-skills').value,
+          description: document.getElementById('job-desc').value
+        }
       };
 
-      try {
-        const resp = await fetch(GAS_BACKEND_URL, {
-          method: 'POST',
-          body: JSON.stringify({ action: 'submitEmployerJob', data: payload })
-        });
-        const res = await resp.json();
-        if (res.status === 'success') {
-          feedback.style.background = '#ECFDF5';
-          feedback.style.color = '#065F46';
-          feedback.innerHTML = `<strong>Vacancy Queued!</strong> Reference: ${res.jobId}. It will go live once verified by JOBNEX administrators.`;
-          document.getElementById('job-submission-form').reset();
-        } else {
-          feedback.style.background = '#FEF2F2';
-          feedback.style.color = '#991B1B';
-          feedback.innerText = res.message;
-        }
-      } catch (err) {
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#991B1B';
-        feedback.innerText = 'Network communication failure.';
-      } finally {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GAS_BACKEND_URL;
+      form.target = 'hidden_upload_iframe';
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'payload';
+      input.value = JSON.stringify(payload);
+      form.appendChild(input);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      setTimeout(() => {
+        feedback.style.background = '#ECFDF5';
+        feedback.style.color = '#065F46';
+        feedback.innerHTML = `<strong>Vacancy Queued!</strong> Your job submission has been forwarded to JOBNEX administrators for review.`;
+        document.getElementById('job-submission-form').reset();
         btn.disabled = false;
-      }
+      }, 2500);
     }
 
-    // ADMIN AUTHENTICATION & MANAGEMENT CONSOLE
     async function authenticateAdmin() {
       const key = document.getElementById('admin-key-input').value.trim();
       const errBox = document.getElementById('admin-login-error');
@@ -1704,7 +1648,6 @@
       const d = state.adminData;
       if (!d) return;
 
-      // Jobs Table
       document.getElementById('adm-jobs-table-body').innerHTML = d.jobs.map(j => `
         <tr>
           <td><strong>${j.JobID}</strong></td>
@@ -1713,13 +1656,12 @@
           <td>${escapeHtml(j.Location)}</td>
           <td><span class="job-tag" style="background:${j.Status==='Published'?'#DCFCE7':'#FEF3C7'};">${j.Status}</span></td>
           <td>
-            ${j.Status !== 'Published' ? `<button class="btn btn-accent" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Jobs', '${j.JobID}', 'Published', 21)">Approve &amp; Publish</button>` : ''}
-            ${j.Status === 'Published' ? `<button class="btn btn-outline" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Jobs', '${j.JobID}', 'Closed', 21)">Close</button>` : ''}
+            ${j.Status !== 'Published' ? `<button class="btn btn-accent" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Jobs', '${j.JobID}', 'Published', 17)">Approve &amp; Publish</button>` : ''}
+            ${j.Status === 'Published' ? `<button class="btn btn-outline" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Jobs', '${j.JobID}', 'Closed', 17)">Close</button>` : ''}
           </td>
         </tr>
       `).join('');
 
-      // Candidates Table
       document.getElementById('adm-candidates-table-body').innerHTML = d.candidates.map(c => `
         <tr>
           <td><strong>${c.CandidateID}</strong></td>
@@ -1733,7 +1675,6 @@
         </tr>
       `).join('');
 
-      // Employers Table
       document.getElementById('adm-employers-table-body').innerHTML = d.employers.map(e => `
         <tr>
           <td><strong>${e.EmployerID}</strong></td>
@@ -1742,12 +1683,11 @@
           <td>${escapeHtml(e.BusinessLocation)}</td>
           <td><span class="job-tag" style="background:${e.VerificationStatus==='Approved'?'#DCFCE7':'#FEF3C7'};">${e.VerificationStatus}</span></td>
           <td>
-            ${e.VerificationStatus !== 'Approved' ? `<button class="btn btn-accent" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Employers', '${e.EmployerID}', 'Approved', 11)">Verify &amp; Approve</button>` : 'Verified'}
+            ${e.VerificationStatus !== 'Approved' ? `<button class="btn btn-accent" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Employers', '${e.EmployerID}', 'Approved', 10)">Verify &amp; Approve</button>` : 'Verified'}
           </td>
         </tr>
       `).join('');
 
-      // Applications Table
       document.getElementById('adm-applications-table-body').innerHTML = d.applications.map(a => `
         <tr>
           <td><strong>${a.ApplicationID}</strong></td>
@@ -1756,20 +1696,8 @@
           <td>${a.AppliedAt}</td>
           <td><span class="job-tag">${a.ApplicationStatus}</span></td>
           <td>
-            <button class="btn btn-outline" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Applications', '${a.ApplicationID}', 'Shortlisted', 6)">Shortlist</button>
+            <button class="btn btn-outline" style="padding:0.3rem 0.6rem; font-size:0.8rem;" onclick="adminUpdateStatus('Applications', '${a.ApplicationID}', 'Shortlisted', 4)">Shortlist</button>
           </td>
-        </tr>
-      `).join('');
-
-      // Audit Table
-      document.getElementById('adm-audit-table-body').innerHTML = d.auditLogs.map(l => `
-        <tr>
-          <td><small>${l.Timestamp}</small></td>
-          <td>${l.AdminID}</td>
-          <td><strong>${l.Action}</strong></td>
-          <td>${l.RecordType}</td>
-          <td>${l.RecordID}</td>
-          <td>${escapeHtml(l.Details)}</td>
         </tr>
       `).join('');
     }
@@ -1816,7 +1744,6 @@
           body: JSON.stringify({
             action: 'adminCreateJob',
             adminKey: state.adminToken,
-            adminId: 'JOBNEX-DIRECTOR',
             data: payload
           })
         });
@@ -1865,7 +1792,7 @@
       document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
 
-      const tabs = ['daily-post', 'manage-jobs', 'candidates', 'employers', 'applications', 'audit'];
+      const tabs = ['daily-post', 'manage-jobs', 'candidates', 'employers', 'applications'];
       tabs.forEach(t => {
         const el = document.getElementById('adm-tab-' + t);
         if (el) el.style.display = (t === tabKey) ? 'block' : 'none';
@@ -1884,5 +1811,3 @@
   </script>
 </body>
 </html>
-
-const = "https://script.google.com/macros/s/AKfycby...YOUR_DEPLOYMENT_ID.../exec";
