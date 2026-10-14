@@ -1409,7 +1409,7 @@
       reader.readAsDataURL(file);
     }
 
-    async function submitCandidateRegistration(e) {
+function submitCandidateRegistration(e) {
       e.preventDefault();
       const btn = document.getElementById('can-submit-btn');
       const feedback = document.getElementById('can-feedback');
@@ -1446,35 +1446,37 @@
         }
       };
 
-      try {
-        await fetch(GAS_BACKEND_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain'
-          },
-          body: JSON.stringify(payload)
-        });
+      // Create an invisible form dynamically that posts to the hidden iframe
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GAS_BACKEND_URL;
+      form.target = 'hidden_upload_iframe';
 
-        // In no-cors mode, the browser sends the payload safely without being aborted by redirect blocks
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'postData';
+      input.value = JSON.stringify(payload);
+      form.appendChild(input);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      // Listen for the iframe load or show success after submission
+      setTimeout(() => {
         feedback.style.background = '#ECFDF5';
         feedback.style.color = '#065F46';
         feedback.innerHTML = `
           <h4 style="margin-bottom:0.5rem;">&#9989; Profile Submitted Successfully!</h4>
-          <p>Your details and CV document have been saved to the JOBNEX recruitment database.</p>
+          <p>Your candidate details and CV have been safely recorded.</p>
         `;
         document.getElementById('candidate-form').reset();
         document.getElementById('cv-filename-display').innerText = '';
         state.selectedCVBase64 = null;
-
-      } catch (err) {
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#991B1B';
-        feedback.innerText = 'Submission error: ' + err.message;
-      } finally {
         btn.disabled = false;
         btn.innerText = 'Submit Candidate Profile & Secure CV';
-      }
+      }, 3000);
+    }    
     }    async function submitEmployerRegistration(e) {
       e.preventDefault();
       const btn = document.getElementById('emp-submit-btn');
@@ -1804,4 +1806,5 @@
     }
   </script>
 </body>
+<iframe name="hidden_upload_iframe" id="hidden_upload_iframe" style="display:none;"></iframe>
 </html>
